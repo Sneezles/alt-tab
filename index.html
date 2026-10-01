@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>alt-tab.si</title>
+  <meta name="description" content="Deep work in progress.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23d97757'/%3E%3Cpath d='M9 16h14M17 10l6 6-6 6' stroke='%23fff' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1 id="headline">Deep work in progress<span class="dots" aria-hidden="true"><i>.</i><i>.</i><i>.</i></span></h1>
+
+    <div class="stage" id="stage">
+      <svg class="room" viewBox="0 0 840 560" aria-label="A developer at a desk, facing a computer" role="img">
+        <g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <!-- floor -->
+          <path d="M20 540 H835" stroke-width="2"/>
+          <!-- desk -->
+          <path d="M250 372 H835"/>
+          <path d="M330 376 V540 M800 376 V540"/>
+          <!-- monitor stand -->
+          <path d="M602 330 V366 M542 368 H662"/>
+          <!-- keyboard -->
+          <rect x="262" y="362" width="74" height="10" rx="3"/>
+          <!-- mug + steam -->
+          <path d="M346 348 V370 H368 V348 Z"/><path d="M368 354 C379 354 379 366 368 366"/>
+          <g class="steam" stroke-width="2">
+            <path d="M351 340 C346 333 356 329 351 321"/>
+            <path d="M358 340 C353 333 363 329 358 321" style="animation-delay:.8s"/>
+            <path d="M365 340 C360 333 370 329 365 321" style="animation-delay:1.6s"/>
+          </g>
+          <!-- chair -->
+          <path d="M92 440 H172" stroke-width="6"/>
+          <path d="M98 440 C85 405 88 365 100 335"/>
+          <path d="M135 442 V517 M95 517 H175"/>
+          <circle cx="100" cy="529" r="9"/><circle cx="170" cy="529" r="9"/>
+          <!-- developer: back, chest, head -->
+          <path d="M112 433 C100 395 112 350 150 320"/>
+          <path d="M182 313 C200 340 205 375 195 417"/>
+          <path d="M176 312 L164 324 M200 309 L190 320"/>
+          <circle cx="192" cy="285" r="27"/>
+          <path d="M219 284 L223 289 L219 291"/>
+          <circle cx="205" cy="277" r="1.8" fill="currentColor"/>
+          <path d="M167 285 C165 250 205 245 214 267"/>
+          <rect x="176" y="279" width="14" height="22" rx="6" fill="var(--bg)"/>
+          <!-- arms -->
+          <path d="M150 330 C160 355 175 375 188 390 L292 367"/>
+          <path d="M170 327 C180 350 195 367 205 383 L296 361"/>
+          <!-- legs -->
+          <path d="M195 417 L255 423 L264 526"/>
+          <path d="M118 440 L256 439 L246 526"/>
+          <path d="M246 526 V540 H292 V532 L264 528"/>
+        </g>
+      </svg>
+
+      <div class="monitor" id="monitor">
+          <div class="screen">
+            <section class="scene is-active" data-scene="terminal">
+              <div class="term-bar"><i></i><i></i><i></i><span>claude</span></div>
+              <pre class="term" id="term"></pre>
+            </section>
+
+            <section class="scene" data-scene="image">
+              <img class="photo" src="assets/martin-strel.png" alt="Martin Strel podcast">
+            </section>
+
+            <section class="scene" data-scene="notes">
+              <div class="notes">
+                <h2>Martin Strel #47: notes</h2>
+                <ul>
+                  <li><time>[14:32]</time> "A fish doesn't write unit tests. A fish just swims."</li>
+                  <li class="plain"><s>KOFEIN</s> CVIČEK</li>
+                </ul>
+                <h2 class="todo-h">TODO</h2>
+                <ul>
+                  <li class="plain">renew claude subscription!!</li>
+                  <li class="plain">WRITE DAILY UPDATE !!! REMINDER !!!!</li>
+                </ul>
+              </div>
+            </section>
+
+            <section class="scene" data-scene="so">
+              <div class="so">
+                <div class="so-top">
+                  <svg viewBox="0 0 32 37" aria-hidden="true"><path d="M26 33v-9h4v13H0V24h4v9z" fill="#bcbbbb"/><path d="M7 22l15 3 1-4-15-3zm2-7l14 6 2-3-14-6zm5-7l12 10 3-3L17 5zM21 0l-3 2 10 13 3-2z" fill="#f48024"/></svg>
+                  <span>stack<b>overflow</b></span>
+                </div>
+                <h3>How do I exit terminal? <span class="so-dup">[duplicate]</span></h3>
+                <p class="so-meta">Asked today &middot; Viewed 2.4m times</p>
+                <div class="so-ans">
+                  <div class="so-votes">
+                    <span class="so-up">&#9650;</span>
+                    <b>1,247</b>
+                    <span class="so-check">&#10003;</span>
+                  </div>
+                  <div class="so-body">
+                    <p>Did you even read the docs? This is trivial. RTFM. Honestly, I don't know how you got this far in your career.</p>
+                    <div class="so-user"><i></i><span><a>xX_senior_dev_Xx</a> <small>847k rep</small></span></div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+    </div>
+
+    <p class="caption" id="caption">Claude is thinking. You are waiting.</p>
+    <p class="hint" id="hint"><kbd>Alt</kbd> + <kbd>Tab</kbd> <small>(or <kbd>Cmd</kbd> + <kbd>Tab</kbd>)</small></p>
+    <p class="counter">Alt-Tabs today: <b id="count">0</b></p>
+  </main>
+
+  <div class="keys" id="keys" aria-hidden="true"><kbd>Alt</kbd><span>+</span><kbd>Tab</kbd></div>
+
+  <footer>alt-tab.si &mdash; because .ai was already taken.</footer>
+  <script src="script.js"></script>
+</body>
+</html>
