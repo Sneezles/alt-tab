@@ -73,6 +73,23 @@ h1 {
   30% { transform: translateY(-.25em); opacity: 1; }
 }
 
+/* slow, chill head bob, pivoting at the neck */
+.head { transform-box: view-box; transform-origin: 185px 311px; animation: bob 1.6s ease-in-out infinite; }
+@keyframes bob {
+  0%, 100% { transform: rotate(0) translateY(0); }
+  25%      { transform: rotate(6deg) translateY(2px); }
+  50%      { transform: rotate(0) translateY(0); }
+  75%      { transform: rotate(3deg) translateY(1px); }
+}
+
+/* notes float up and away from the headphones */
+.notes-fx text { opacity: 0; transform-box: fill-box; transform-origin: center; animation: note 5.1s ease-out infinite; }
+@keyframes note {
+  0%   { opacity: 0; transform: translate(0, 0) rotate(0); }
+  15%  { opacity: 1; }
+  100% { opacity: 0; transform: translate(-120px, -70px) rotate(-14deg); }
+}
+
 .steam path { opacity: 0; animation: steam 2.4s ease-in-out infinite; }
 @keyframes steam {
   0%   { opacity: 0; transform: translateY(6px); }
@@ -182,5 +199,7 @@ footer { padding: 1rem 16px 1.5rem; text-align: center; font-size: .75rem; color
   .term .cursor { animation: none; }
   .steam path { animation: none; opacity: .6; }
   .dots i { animation: none; }
+  .head { animation: none; }
+  .notes-fx text { animation: none; }
 }
 .so-dup { color: #6a737c; font-size: .6em; }
